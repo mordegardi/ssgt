@@ -7,17 +7,21 @@ def generate_page(from_path, template_path, dest_path, basepath):
     print(f"Generating page from {from_path} to {dest_path} using {template_path}")
 
     descr = open(from_path)
+
     markdown = descr.read()
+
     descr.close()
 
     descr = open(template_path)
+
     template = descr.read()
+
     descr.close()
 
     html_string = markdown_to_html_node(markdown)
     page_title = extract_title(markdown)
 
-    template = template.replace("{{ Title }}", basepath)
+    template = template.replace("{{ Title }}", page_title)
     template = template.replace("{{ Content }}", html_string)
 
     template = template.replace('href="/', f'href="{basepath}')
