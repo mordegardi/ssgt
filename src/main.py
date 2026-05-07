@@ -11,6 +11,7 @@ def main():
 
     if len(args) > 2:
         basepath = args[1]
+        print("basepath: ", basepath)
 
     copy_static("./static", "./docs")
     generate_pages_recursive("./content", "./template.html", "./docs", basepath)
