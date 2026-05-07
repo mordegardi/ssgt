@@ -32,9 +32,7 @@ def generate_page(from_path, template_path, dest_path, basepath):
     os.makedirs(dirname, exist_ok=True)
 
     descr = open(dest_path, "w")
-
     descr.write(template)
-
     descr.close()
 
 
