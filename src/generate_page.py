@@ -7,15 +7,11 @@ def generate_page(from_path, template_path, dest_path, basepath):
     print(f"Generating page from {from_path} to {dest_path} using {template_path}")
 
     descr = open(from_path)
-
     markdown = descr.read()
-
     descr.close()
 
     descr = open(template_path)
-
     template = descr.read()
-
     descr.close()
 
     html_string = markdown_to_html_node(markdown)
