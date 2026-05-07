@@ -7,7 +7,7 @@ from generate_page import generate_pages_recursive
 def main():
     args = sys.argv
 
-    basepath = "/"
+    basepath = "/2"
 
     if len(args) > 2:
         basepath = args[1]
