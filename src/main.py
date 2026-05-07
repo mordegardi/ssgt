@@ -7,11 +7,10 @@ from generate_page import generate_pages_recursive
 def main():
     args = sys.argv
 
-    basepath = "/2"
+    basepath = "/"
 
-    if len(args) > 2:
+    if len(args) > 1:
         basepath = args[1]
-        print("basepath: ", basepath)
 
     copy_static("./static", "./docs")
     generate_pages_recursive("./content", "./template.html", "./docs", basepath)
