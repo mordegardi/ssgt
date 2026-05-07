@@ -17,7 +17,7 @@ def generate_page(from_path, template_path, dest_path, basepath):
     html_string = markdown_to_html_node(markdown)
     page_title = extract_title(markdown)
 
-    template = template.replace("{{ Title }}", page_title)
+    template = template.replace("{{ Title }}", basepath)
     template = template.replace("{{ Content }}", html_string)
 
     template = template.replace('href="/', f'href="{basepath}11')
